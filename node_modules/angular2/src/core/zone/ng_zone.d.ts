@@ -1,5 +1,6 @@
+import { ZoneLike } from 'angular2/src/facade/lang';
 import { EventEmitter } from 'angular2/src/facade/async';
-export interface NgZoneZone extends Zone {
+export interface NgZoneZone extends ZoneLike {
 }
 /**
  * Interface for a function with zero arguments.

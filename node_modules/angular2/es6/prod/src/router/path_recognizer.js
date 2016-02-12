@@ -172,13 +172,14 @@ export class PathRecognizer {
                 break;
             }
             if (isPresent(currentSegment)) {
-                captured.push(currentSegment.path);
                 // the star segment consumes all of the remaining URL, including matrix params
                 if (segment instanceof StarSegment) {
                     positionalParams[segment.name] = currentSegment.toString();
+                    captured.push(currentSegment.toString());
                     nextSegment = null;
                     break;
                 }
+                captured.push(currentSegment.path);
                 if (segment instanceof DynamicSegment) {
                     positionalParams[segment.name] = currentSegment.path;
                 }

@@ -286,7 +286,8 @@ export class NgZone {
         var ngZone = this;
         var errorHandling;
         if (enableLongStackTrace) {
-            errorHandling = StringMapWrapper.merge(Zone.longStackTraceZone, { onError: function (e) { ngZone._notifyOnError(this, e); } });
+            errorHandling =
+                StringMapWrapper.merge(global.Zone.longStackTraceZone, { onError: function (e) { ngZone._notifyOnError(this, e); } });
         }
         else {
             errorHandling = { onError: function (e) { ngZone._notifyOnError(this, e); } };

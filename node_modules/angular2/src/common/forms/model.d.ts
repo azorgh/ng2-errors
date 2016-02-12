@@ -90,6 +90,7 @@ export declare abstract class AbstractControl {
     find(path: Array<string | number> | string): AbstractControl;
     getError(errorCode: string, path?: string[]): any;
     hasError(errorCode: string, path?: string[]): boolean;
+    root: AbstractControl;
     private _calculateStatus();
 }
 /**

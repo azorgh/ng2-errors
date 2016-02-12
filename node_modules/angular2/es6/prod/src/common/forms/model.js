@@ -162,6 +162,13 @@ export class AbstractControl {
     hasError(errorCode, path = null) {
         return isPresent(this.getError(errorCode, path));
     }
+    get root() {
+        let x = this;
+        while (isPresent(x._parent)) {
+            x = x._parent;
+        }
+        return x;
+    }
     /** @internal */
     _updateControlsErrors() {
         this._status = this._calculateStatus();
