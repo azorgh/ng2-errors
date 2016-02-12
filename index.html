@@ -1,37 +1,37 @@
 <!-- <html> -->
 
   <head>
-    <base href="/" />
+    <script>document.write('<base href="' + document.location + '" />');</script>
     <meta charset="UTF-8">
 
     <link rel="icon" type="image/png" href="https://angular.io/resources/images/favicons/favicon-16x16.png">
 
     <!-- 1. Load libraries -->
     <!-- IE required polyfills, in this exact order -->
-    <script src="http://pallmallshow.github.io/ng2-errors/node_modules/es6-shim/es6-shim.min.js"></script>
-    <script src="http://pallmallshow.github.io/ng2-errors/node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
 
-    <script src="http://pallmallshow.github.io/ng2-errors/node_modules/angular2/bundles/angular2-polyfills.js"></script>
-    <script src="http://pallmallshow.github.io/ng2-errors/node_modules/systemjs/dist/system.src.js"></script>
-    <script src="http://pallmallshow.github.io/ng2-errors/node_modules/rxjs/bundles/Rx.js"></script>
-    <script src="http://pallmallshow.github.io/ng2-errors/node_modules/angular2/bundles/angular2.min.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.min.js"></script>
 
     <!-- Router resource -->
-    <script src="http://pallmallshow.github.io/ng2-errors/node_modules/angular2/bundles/router.min.js"></script>
+    <script src="node_modules/angular2/bundles/router.min.js"></script>
 
     <!-- Http resource -->
-    <script src="http://pallmallshow.github.io/ng2-errors/node_modules/angular2/bundles/http.min.js"></script>
+    <script src="node_modules/angular2/bundles/http.min.js"></script>
 
     <!-- Material resources -->
-    <link rel="stylesheet" href="http://pallmallshow.github.io/ng2-errors/node_modules/material-design-lite/material.min.css">
+    <link rel="stylesheet" href="node_modules/material-design-lite/material.min.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="http://pallmallshow.github.io/ng2-errors/node_modules/material-design-lite/material.min.js"></script>
+    <script src="node_modules/material-design-lite/material.min.js"></script>
 
     <!-- PrismJS -->
-    <link rel="stylesheet" href="http://pallmallshow.github.io/ng2-errors/node_modules/prismjs/themes/prism.css">
-    <script src="http://pallmallshow.github.io/ng2-errors/node_modules/prismjs/prism.js"></script>
+    <link rel="stylesheet" href="node_modules/prismjs/themes/prism.css">
+    <script src="node_modules/prismjs/prism.js"></script>
 
-    <link rel="stylesheet" href="http://pallmallshow.github.io/ng2-errors/public/css/main.css">
+    <link rel="stylesheet" href="public/css/main.css">
 
     <!-- 2. Configure SystemJS -->
     <script>
@@ -43,7 +43,7 @@
           }
         }
       });
-      System.import('/ng2-errors/app/boot.js')
+      System.import('app/boot.js')
             .then(null, console.error.bind(console));
     </script>
 
