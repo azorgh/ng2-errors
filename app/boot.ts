@@ -6,6 +6,9 @@ import {App} from './AppComponent';
 
 import {ErrorsService} from "./Errors/Services/ErrorsService";
 import {HTTP_PROVIDERS} from "angular2/http";
+import {enableProdMode} from "angular2/core";
+
+enableProdMode();
 
 bootstrap(App, [
     ErrorsService,

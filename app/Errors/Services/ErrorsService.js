@@ -24,7 +24,7 @@ System.register(["angular2/core", "angular2/http"], function(exports_1) {
                     this._http = _http;
                 }
                 ErrorsService.prototype.getErrors = function () {
-                    return this._http.get('/app/Errors/json/errors.json').map(function (res) { return res.json(); }).toPromise();
+                    return this._http.get('app/Errors/json/errors.json').map(function (res) { return res.json(); }).toPromise();
                 };
                 /**
                  * Cause we doesn't use a webservice

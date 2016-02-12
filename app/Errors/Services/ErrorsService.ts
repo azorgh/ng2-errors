@@ -6,7 +6,7 @@ export class ErrorsService{
     constructor(private _http : Http){}
 
     getErrors(){
-        return this._http.get('/app/Errors/json/errors.json').map(res => res.json()).toPromise();
+        return this._http.get('app/Errors/json/errors.json').map(res => res.json()).toPromise();
     }
 
 
