@@ -1,0 +1,30 @@
+<breadcrumb [breadcrumb]="breadcrumb"></breadcrumb>
+<h3>How it works ?</h3>
+<p>
+    'Angular2 Errors' is a application built with Angular2 (actually in Beta version).<br/>
+    It allows you to navigate between the errors often encountered when the first developments with Angular2.<br/>
+    Errors are taken from <a href="https://daveceddia.com/angular-2-errors/">Dave Ceddia website</a>. Thanks to him.
+</p>
+
+<h3>Which technologies are used ?</h3>
+<p>
+    This app is built with Angular2.<br/>
+    Design was provided by <a href="https://www.getmdl.io">Get MDL</a> pending the release of Material for the new version of AngularJS.<br/>
+</p>
+
+<h3>What tools from Angular are used ?</h3>
+<p>
+    In this application, many tools are used :
+</p>
+<ul>
+    <li>Templates in separate file</li>
+    <li>Http : Used to get a JSON file (which contains all errors)</li>
+    <li>Promise</li>
+    <li>Custom service with dependencies injection</li>
+    <li>Router for customs URLs (with child routes)</li>
+    <li>Dynamic title</li>
+</ul>
+
+<p>
+    <button [routerLink]="['Errors']" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent start">Getting started</button>
+</p>

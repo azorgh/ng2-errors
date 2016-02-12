@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "TypeError: allStyles.map is not a function",
+    "description": "'styles’ needs to be an array of strings, not a single string.",
+    "link": ""
+  },
+  {
+    "id": 2,
+    "name": "Component 'Something' cannot have both 'styles' and <pre><code>@View</code></pre> set at the same time",
+    "description": "I provided a <pre><code>@View</code></pre> decorator, and also put a 'styles' key in the <pre><code>@Component</pre></code> – this doesn’t work. Put 'styles' in the object passed to @View.",
+    "link": ""
+  },
+  {
+    "id": 3,
+    "name": "Unexpected directive value 'undefined' on the View of component 'AppComponent'",
+    "description": "I defined a component as <pre><code>class Something</pre></code> when it should’ve been <pre><code>export class Something</pre></code> – forgot to export it from the file it was defined in. The <pre><code>import</pre></code> didn't fail, but the <pre><code>directives: [Something]</pre></code> did…",
+    "link": ""
+  },
+  {
+    "id": 4,
+    "name": "No provider for UserList! (UserCmp -> UserList)",
+    "description": "I forgot to add UserList to the viewProviders array in the parent view. The fix was <pre><code>@Component({viewProviders: [UserList]})</pre></code>",
+    "link": ""
+  },
+  {
+    "id": 5,
+    "name": "Cannot resolve all parameters for UserList(?). Make sure they all have valid type or annotations.",
+    "description": "I got this when I was trying to inject the <pre><code>Http</pre></code> service.<br/> For WHY this happens, see Injecting services in services in Angular 2.<br/><br/>There are 2 different ways to fix this:<br/>Way #1: Put <pre><code>@Inject(Http)</pre></code> before the param that should be injected with Http:<br/><pre><code>// This doesn't work :(\r\nconstructor(public http: Http)\r\n// This works :)\r\nconstructor(@Inject(Http) public http: Http)</pre></code> <br/>Way #2: Put <pre><code>@Injectable()</pre></code> (don’t forget the parens!) above the class<br/><pre><code>@Injectable()\r\nconstructor(public http: Http)</pre></code>",
+    "link": ""
+  },
+  {
+    "id": 6,
+    "name": "TypeError: this.http.get(…).map is not a function",
+    "description": "I thought TypeScript was supposed to save us from TypeErrors!<br/>Removing <pre><code>.map</pre></code> fixed the error… but it seems like it should work. I don’t know too much about this new Http service so, maybe the request failed?<br/>Nope: You have to explicitly include the <pre><code>map</pre></code> operator from RxJS. Awesome. Add this line to <pre><code>app.ts</pre></code> (or whatever your main file is):<br/><pre><code>import 'rxjs/add/operator/map';</pre></code>",
+    "link": ""
+  },
+  {
+    "id": 7,
+    "name": "Cannot find a differ supporting object '[object Object]' in [users in UsersCpm@2:14]",
+    "description": "I’m pretty sure this means that a non-array was passed to <pre><code>ngFor</pre></code>. Make sure the thing you pass is an array.",
+    "link": ""
+  },
+  {
+    "id": 8,
+    "name": "Compile error: \"Type 'Observable' is not assignable to type 'any[]'.\"",
+    "description": "Got this when I was trying to <pre><code>return this.http.get()</pre></code> as any[] – it’s not an array, so that doesn’t work. Changing to any works better (or the actual type, for that matter)",
+    "link": ""
+  }
+]

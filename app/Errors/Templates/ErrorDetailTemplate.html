@@ -1,0 +1,6 @@
+<breadcrumb [breadcrumb]="breadcrumb"></breadcrumb>
+
+<div *ngIf="error">
+    <h4 [innerHtml]="error.name"></h4>
+    <p [innerHtml]="error.description"></p>
+</div>
