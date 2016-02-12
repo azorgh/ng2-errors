@@ -15,6 +15,6 @@ bootstrap(App, [
 
     Title,
     ROUTER_PROVIDERS,
-    HTTP_PROVIDERS
+    HTTP_PROVIDERS,
     provide(LocationStrategy, {useClass: HashLocationStrategy})
 ]);
