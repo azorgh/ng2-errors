@@ -45,7 +45,7 @@ System.register(["angular2/core", "angular2/src/platform/browser/title", "../../
                 ErrorsListComponent = __decorate([
                     core_1.Component({
                         selector: 'errors',
-                        templateUrl: '/app/Errors/Templates/ErrorsListTemplate.html',
+                        templateUrl: 'app/Errors/Templates/ErrorsListTemplate.html',
                         directives: [BreadcrumbComponent_1.BreadcrumbComponent, router_1.RouterLink]
                     }), 
                     __metadata('design:paramtypes', [title_1.Title, ErrorsService_1.ErrorsService])

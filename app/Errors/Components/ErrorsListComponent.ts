@@ -7,7 +7,7 @@ import {RouterLink} from 'angular2/router';
 
 @Component({
     selector: 'errors',
-    templateUrl: '/app/Errors/Templates/ErrorsListTemplate.html',
+    templateUrl: 'app/Errors/Templates/ErrorsListTemplate.html',
     directives: [BreadcrumbComponent, RouterLink]
 })
 export class ErrorsListComponent{
