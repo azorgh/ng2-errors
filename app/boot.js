@@ -28,7 +28,8 @@ System.register(['angular2/platform/browser', 'angular2/router', 'rxjs/add/opera
                 ErrorsService_1.ErrorsService,
                 browser_1.Title,
                 router_1.ROUTER_PROVIDERS,
-                http_1.HTTP_PROVIDERS
+                http_1.HTTP_PROVIDERS,
+                core_1.provide(router_1.LocationStrategy, { useClass: router_1.HashLocationStrategy })
             ]);
         }
     }
